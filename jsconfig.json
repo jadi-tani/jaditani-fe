@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": [
+      "vite/client",
+      "vite-plugin-vue-layouts/client",
+      "vite-plugin-pages/client",
+    ]
+  },
+  "exclude": ["node_modules", "dist"]
+}

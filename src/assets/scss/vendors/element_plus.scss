@@ -1,0 +1,17 @@
+
+:root {
+    --el-color-primary: #549F39 !important;
+  }
+
+.el-input__wrapper {
+    @apply h-[45px] bg-white border-transparent
+  }
+  
+  .el-textarea__inner {
+    @apply bg-white
+  }
+
+  .el-input__inner:focus{
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+  }

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './vendors/element_plus.scss';
+
+* {  
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  max-width: 412px;
+  margin: auto;
+  background-color: #FEFEFE;
+}
