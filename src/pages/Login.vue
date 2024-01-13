@@ -11,7 +11,7 @@
         <el-input v-model="form.name" />
       </el-form-item>
       <el-form-item label="Password">
-        <el-input v-model="form.password" />
+        <el-input v-model="form.password" type="password" />
       </el-form-item>
 
       <el-button type="primary" class="w-full rounded-full" @click="onSubmit"
@@ -28,20 +28,19 @@ meta:
 
 <script setup>
 import { reactive } from "vue";
+import { login } from "@/services/auth/login";
 
-// do not use same name with ref
 const form = reactive({
   name: "",
-  region: "",
-  date1: "",
-  date2: "",
-  delivery: false,
-  type: [],
-  resource: "",
-  desc: "",
+  password: "",
 });
 
-const onSubmit = () => {
-  console.log("submit!");
+const onSubmit = async () => {
+  try {
+    const response = await login(form);
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
 };
 </script>
